@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89629F94-9253-4DAD-AA67-CB595A4FE2BD}</ProjectGuid>
-    <OutputType>Library</OutputType>
+    <ProjectGuid>{017DB8DD-E3A1-4970-B258-09C7AA5F0401}</ProjectGuid>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ScadaLibrary</RootNamespace>
-    <AssemblyName>ScadaLibrary</AssemblyName>
+    <RootNamespace>SCADACore</RootNamespace>
+    <AssemblyName>SCADACore</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -39,16 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alarm.cs" />
-    <Compile Include="AnalogInput.cs" />
-    <Compile Include="AnalogOutput.cs" />
-    <Compile Include="Digitalinput.cs" />
-    <Compile Include="DigitalOutput.cs" />
-    <Compile Include="IAlarmDisplay.cs" />
-    <Compile Include="IDatabaseManager.cs" />
-    <Compile Include="ITrading.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SimulationDriver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScadaLibrary\ScadaLibrary.csproj">
+      <Project>{89629f94-9253-4dad-aa67-cb595a4fe2bd}</Project>
+      <Name>ScadaLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

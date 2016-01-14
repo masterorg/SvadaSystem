@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace ScadaLibrary
 {
-    interface IDatabaseManager
+   public interface IDatabaseManager
     {
+       void addElement(Object el);
+       void removeElement(Object el);
+       void turnOnScan(Object el);
+       void turnOffScan(Object el);
+       void turnOnAuto(Object el);
+       void turnOnManual(Object el);
+
     }
 }

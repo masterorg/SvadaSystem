@@ -1,0 +1,4 @@
+C:\Users\stefan\Desktop\ScadaLibrary\ScadaLibrary\bin\Debug\ScadaLibrary.dll
+C:\Users\stefan\Desktop\ScadaLibrary\ScadaLibrary\bin\Debug\ScadaLibrary.pdb
+C:\Users\stefan\Desktop\ScadaLibrary\ScadaLibrary\obj\Debug\ScadaLibrary.dll
+C:\Users\stefan\Desktop\ScadaLibrary\ScadaLibrary\obj\Debug\ScadaLibrary.pdb
