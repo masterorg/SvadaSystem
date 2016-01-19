@@ -1,22 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ScadaLibrary
 {
+    [DataContract]
   public  class AnalogInput
     {
+        [DataMember]
         private string tagName;
+        [DataMember]
         private string description;
-        private string driver;
+        [DataMember]
+        private SimulationDriver driver;
+        [DataMember]
         private string ioAddress;
+        [DataMember]
         private int scanTime;
         /*******FALE ALARMI*****/
+        [DataMember]
         private bool onOfScan;
+        [DataMember]
         private bool autoOrManual;
+        [DataMember]
         private double lowLimit;
+        [DataMember]
         private double highLimit;
       /**********FALE UNITS***********/
 
@@ -26,6 +37,12 @@ namespace ScadaLibrary
             set { highLimit = value; }
         }
 
+
+        public SimulationDriver Driver
+        {
+            get { return driver; }
+            set { driver = value; }
+        }
         public double LowLimit
         {
             get { return lowLimit; }
@@ -58,11 +75,7 @@ namespace ScadaLibrary
             set { ioAddress = value; }
         }
 
-        public string Driver
-        {
-            get { return driver; }
-            set { driver = value; }
-        }
+        
 
         public string Description
         {

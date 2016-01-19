@@ -1,18 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace ScadaLibrary
 {
+    [DataContract]
    public class DigitalOutput
     {
-
+        [DataMember]
         private string tagname;
+        [DataMember]
         private string description;
-        private string driver;
+        [DataMember]
+        private SimulationDriver driver;
+        [DataMember]
         private string ioAdress;
+        [DataMember]
         private double initialValue;
 
         public double InitialValue
@@ -27,7 +35,7 @@ namespace ScadaLibrary
             set { ioAdress = value; }
         }
 
-        public string Driver
+        public SimulationDriver Driver
         {
             get { return driver; }
             set { driver = value; }

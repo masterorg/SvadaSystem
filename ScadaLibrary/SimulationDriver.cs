@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ScadaLibrary
 {
-  public static  class SimulationDriver
+  public   class SimulationDriver
     {
         static double amplitude = 100;
 
@@ -29,6 +29,10 @@ namespace ScadaLibrary
 
             return amplitude * DateTime.Now.Second / 60;
 
+        }
+        public static double Triangle()
+        {
+            return amplitude;
         }
     }
 }

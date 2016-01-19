@@ -1,20 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ScadaLibrary
 {
+    [DataContract]
    public class AnalogOutput
     {
+        [DataMember]
         private string tagName;
+        [DataMember]
         private string description;
-        private string driver;
+        [DataMember]
+        private SimulationDriver driver;
+        [DataMember]
         private string ioAddress;
+        [DataMember]
         private double initialValue;
+        [DataMember]
         private double lowLimit;
+        [DataMember]
         private double highLimit;
+
        /*******FALE UNITS**********/
 
         public double HighLimit
@@ -41,7 +51,7 @@ namespace ScadaLibrary
             set { ioAddress = value; }
         }
 
-        public string Driver
+        public SimulationDriver Driver
         {
             get { return driver; }
             set { driver = value; }

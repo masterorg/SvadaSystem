@@ -1,43 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ScadaLibrary
 {
+    [DataContract]
    public class Digitalinput
     {
+        [DataMember]
         private String tagName;
+        [DataMember]
+        private bool autoOrManual;
+        [DataMember]
+        private String descrition;
+        [DataMember]
+        private SimulationDriver driver;
+        [DataMember]
+        private String ioAdress;
+        [DataMember]
+        private int scanTime;
+        [DataMember]
+        private bool onOfScan;
 
         public String TagName
         {
             get { return tagName; }
             set { tagName = value; }
         }
-        private String descrition;
+       
 
         public String Descrition
         {
             get { return descrition; }
             set { descrition = value; }
         }
+       
 
-        private String driver;
-
-        public String Driver
+        public SimulationDriver Driver
         {
             get { return driver; }
             set { driver = value; }
         }
-        private String ioAdress;
+        
 
         public String IoAdress
         {
             get { return ioAdress; }
             set { ioAdress = value; }
         }
-        private int scanTime;
+        
 
         public int ScanTime
         {
@@ -46,14 +60,15 @@ namespace ScadaLibrary
         }
 
        /***************FALE ALARMI*************/
-        private bool onOfScan;
+
+        
 
         public bool OnOfScan
         {
             get { return onOfScan; }
             set { onOfScan = value; }
         }
-        private bool autoOrManual;
+        
 
         public bool AutoOrManual
         {
