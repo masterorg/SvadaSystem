@@ -85,12 +85,43 @@ namespace SCADACore
 
         public void turnOnScan(string id)
         {
-            throw new NotImplementedException();
+            if (tags.ContainsKey(id))
+            {
+                lock (tags)
+                {
+                    Object o = tags[id];
+
+                    if (o is Digitalinput)
+                        ((Digitalinput)o).OnOfScan = true;
+                    
+                    if (o is AnalogInput)
+                        ((AnalogInput)o).OnOfScan = true;
+                    
+
+                }
+                Console.WriteLine(" Tag with key :" + id + " scan on");
+            }
+            
         }
 
         public void turnOffScan(string id)
         {
-            throw new NotImplementedException();
+            if (tags.ContainsKey(id))
+            {
+                lock (tags)
+                {
+                    Object o = tags[id];
+
+                    if (o is Digitalinput)
+                        ((Digitalinput)o).OnOfScan = false;
+
+                    if (o is AnalogInput)
+                        ((AnalogInput)o).OnOfScan = false;
+
+
+                }
+                Console.WriteLine(" Tag with key :" + id + " scan on");
+            }
         }
 
         public void turnOnAuto(string id)

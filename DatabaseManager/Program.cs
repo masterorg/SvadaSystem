@@ -36,6 +36,9 @@ namespace DatabaseManager
             proxy.addDI(i);
 
             proxy.removeElement("bb");
+            Console.WriteLine("Turn on scan");
+            proxy.turnOnScan("di1");
+
 
             Console.ReadLine();
         }
