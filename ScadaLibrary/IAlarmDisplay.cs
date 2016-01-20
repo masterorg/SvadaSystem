@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace ScadaLibrary
 {
     [ServiceContract]
-    interface IAlarmDisplay
+   public interface IAlarmDisplay
     {
 
         [OperationContract]
-        void writeAlarms();
+        String writeAlarms();
     }
 }

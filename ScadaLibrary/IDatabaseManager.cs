@@ -19,15 +19,15 @@ namespace ScadaLibrary
         [OperationContract]
        void addAO(AnalogOutput el);
         [OperationContract]
-       void removeElement(Object el);
+       void removeElement(String id);
         [OperationContract]
-       void turnOnScan(Object el);
+       void turnOnScan(String id);
         [OperationContract]
-       void turnOffScan(Object el);
+       void turnOffScan(String id);
         [OperationContract]
-       void turnOnAuto(Object el);
+       void turnOnAuto(String id);
         [OperationContract]
-       void turnOnManual(Object el);
+       void turnOnManual(String id);
 
     }
 }

@@ -1,0 +1,8 @@
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\obj\Debug\SCADACore.csprojResolveAssemblyReference.cache
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\bin\Debug\SCADACore.exe.config
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\bin\Debug\SCADACore.exe
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\bin\Debug\SCADACore.pdb
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\bin\Debug\ScadaLibrary.dll
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\bin\Debug\ScadaLibrary.pdb
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\obj\Debug\SCADACore.exe
+C:\Users\stefan\Desktop\ScadaLibrary\SCADACore\obj\Debug\SCADACore.pdb
