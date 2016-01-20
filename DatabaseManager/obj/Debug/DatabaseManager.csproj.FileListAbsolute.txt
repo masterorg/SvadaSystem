@@ -1,0 +1,8 @@
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\bin\Debug\DatabaseManager.exe.config
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\obj\Debug\DatabaseManager.csprojResolveAssemblyReference.cache
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\bin\Debug\DatabaseManager.exe
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\bin\Debug\ScadaLibrary.dll
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\bin\Debug\ScadaLibrary.pdb
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\obj\Debug\DatabaseManager.exe
+C:\Users\stefan\Desktop\ScadaLibrary\DatabaseManager\obj\Debug\DatabaseManager.pdb

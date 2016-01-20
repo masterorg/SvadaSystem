@@ -14,32 +14,73 @@ namespace SCADACore
    public class Core:IDatabaseManager,IAlarmDisplay,ITrading,IDisposable
     {
 
-        private Dictionary<String, Thread> threads;
+        private Dictionary<String, Thread> threads = new Dictionary<String,Thread>();
+        private Dictionary<String, Object> tags = new Dictionary<String,Object>();
+
+
         
 
         public void addDI(Digitalinput el)
         {
-            throw new NotImplementedException();
+            if (el != null && !tags.ContainsKey(el.TagName))
+            {
+                lock (tags)
+                {
+                    tags.Add(el.TagName,el);
+                }
+                Console.WriteLine("DI Tag :" +el.TagName+" is added");
+            }
         }
 
         public void addDO(DigitalOutput el)
         {
-            throw new NotImplementedException();
+            if (el != null && !tags.ContainsKey(el.Tagname))
+            {
+                lock (tags)
+                {
+                    tags.Add(el.Tagname, el);
+                }
+                Console.WriteLine("DO Tag :" + el.Tagname + " is added");
+            }
         }
 
         public void addAI(AnalogInput el)
         {
-            throw new NotImplementedException();
+            if (el != null && !tags.ContainsKey(el.TagName))
+            {
+                lock (tags)
+                {
+                    tags.Add(el.TagName, el);
+                }
+                Console.WriteLine("AI Tag :" + el.TagName + " is added");
+            }
         }
 
         public void addAO(AnalogOutput el)
         {
-            throw new NotImplementedException();
+            if (el != null && !tags.ContainsKey(el.TagName))
+            {
+                lock (tags)
+                {
+                    tags.Add(el.TagName, el);
+                }
+                Console.WriteLine("AO Tag :" + el.TagName + " is added");
+            }
         }
 
         public void removeElement(string id)
         {
-            throw new NotImplementedException();
+            if (tags.ContainsKey(id))
+            { 
+                lock(tags)
+                {
+                    tags.Remove(id);
+                    
+                }
+                Console.WriteLine(" Tag with key :" + id + " is removed");
+            }
+            else
+                Console.WriteLine(" Tag with key :" + id + " doesnt exists");
         }
 
         public void turnOnScan(string id)
